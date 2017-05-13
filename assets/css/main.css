@@ -8414,3 +8414,144 @@
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+		#banner > .slider {
+			-moz-flex-grow: 0;
+			-webkit-flex-grow: 0;
+			-ms-flex-grow: 0;
+			flex-grow: 0;
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
+			-moz-transition: opacity 1.5s ease-in-out;
+			-webkit-transition: opacity 1.5s ease-in-out;
+			-ms-transition: opacity 1.5s ease-in-out;
+			transition: opacity 1.5s ease-in-out;
+			width: 60%;
+			opacity: 1;
+			position: relative;
+		}
+
+			#banner > .slider > article {
+				-moz-transition: opacity 1.5s, visibility 1.5s;
+				-webkit-transition: opacity 1.5s, visibility 1.5s;
+				-ms-transition: opacity 1.5s, visibility 1.5s;
+				transition: opacity 1.5s, visibility 1.5s;
+				background-size: cover;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				opacity: 0;
+				visibility: hidden;
+				z-index: 0;
+			}
+
+				#banner > .slider > article.visible {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				#banner > .slider > article.top {
+					z-index: 1;
+				}
+
+				#banner > .slider > article:before {
+					content: '';
+					height: 100%;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+
+				#banner > .slider > article img {
+					height: 100%;
+					width: 100%;
+				}
+
+		body.is-loading #banner > .slider {
+			opacity: 0;
+		}
+
+/*		@media screen and (max-width: 1680px) {
+
+			#banner > .items section {
+				padding: 4.5em 5em 2.5em 5em ;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#banner > .items section {
+				padding: 3.5em 3em 1.5em 3em ;
+			}
+
+		}
+*/
+		@media screen and (max-width: 980px) {
+
+			#banner {
+				-moz-flex-direction: column-reverse;
+				-webkit-flex-direction: column-reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+			}
+
+/*				#banner > .items {
+					-moz-flex-direction: row;
+					-webkit-flex-direction: row;
+					-ms-flex-direction: row;
+					flex-direction: row;
+					width: 100%;
+				}
+*/
+				#banner > .slider {
+					height: 40em;
+					max-height: 55vh;
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+/*			#banner > .items section {
+				padding: 3em 3em 1em 3em ;
+			}
+
+				#banner > .items section h1 {
+					font-size: 1.25em;
+				}*/
+
+			#banner > .slider {
+				height: 30em;
+				max-height: none;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+/*			#banner > .items {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+			}
+
+				#banner > .items section {
+					padding: 3em 3em 1em 3em ;
+				}*/
+
+			#banner > .slider {
+				height: 20em;
+				max-height: 40vh;
+			}
+
+		}
