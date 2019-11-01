@@ -5603,6 +5603,10 @@
 		background-color: rgba(0, 0, 0, 0);
 	}
 
+	.spotlight .image img{
+		max-height: 100vw;
+	}
+
 	.spotlight.invert .image {
 		background-color: rgba(255, 255, 255, 0.125);
 	}
