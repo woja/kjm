@@ -5604,7 +5604,7 @@
 	}
 
 	.spotlight .image img{
-		max-height: 100vw;
+		max-height: 80vh;
 	}
 
 	.spotlight.invert .image {
