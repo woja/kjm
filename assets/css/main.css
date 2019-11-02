@@ -3259,7 +3259,7 @@
 	}
 
 		.banner.style1 .content {
-			padding: 7rem 7rem 5rem 7rem ;
+			padding: 2rem 4rem 2rem 8rem ;
 			-moz-align-self: center;
 			-webkit-align-self: center;
 			-ms-align-self: center;
@@ -3272,7 +3272,6 @@
 			-webkit-flex-shrink: 1;
 			-ms-flex-shrink: 1;
 			flex-shrink: 1;
-			width: 50%;
 			max-width: 48rem;
 			margin: 0 auto;
 		}
@@ -3287,7 +3286,6 @@
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
 			border-radius: 0;
-			width: 50%;
 		}
 
 			.banner.style1 .image img {
@@ -3308,10 +3306,10 @@
 				border-radius: 0;
 			}
 
-		@media screen and (max-width: 1680px) {
+		/* @media screen and (max-width: 1680px) {
 
 			.banner.style1 .content {
-				padding: 5rem 5rem 3rem 5rem ;
+				padding: 4rem 4rem 2rem 4rem ;
 			}
 
 		}
@@ -3322,12 +3320,15 @@
 				padding: 4rem 4rem 2rem 4rem ;
 			}
 
-		}
+		} */
 
 		@media screen and (max-width: 980px) {
 
 			.banner.style1 .content {
 				padding: 3.75rem 3rem 1.75rem 3rem ;
+			}
+			.banner.style1 .content img{
+				align-self: center;
 			}
 
 		}
@@ -3336,6 +3337,9 @@
 
 			.banner.style1 .content {
 				padding: 2.5rem 2rem 0.5rem 2rem ;
+			}
+			.banner.style1 .content img{
+				align-self: center;
 			}
 
 		}
@@ -6283,6 +6287,7 @@
 			-webkit-justify-content: inherit;
 			-ms-justify-content: inherit;
 			justify-content: inherit;
+			width: 90%;
 		}
 
 		.gallery.style1 article {
@@ -8433,9 +8438,10 @@
 			-webkit-transition: opacity 1.5s ease-in-out;
 			-ms-transition: opacity 1.5s ease-in-out;
 			transition: opacity 1.5s ease-in-out;
-			width: 60%;
+			width: 50%;
 			opacity: 1;
 			position: relative;
+			vertical-align: middle;
 		}
 
 			#banner > .slider > article {
@@ -8476,6 +8482,7 @@
 				#banner > .slider > article img {
 					height: 100%;
 					width: 100%;
+					vertical-align: middle;
 				}
 
 		body.is-loading #banner > .slider {
@@ -8534,6 +8541,7 @@
 				}*/
 
 			#banner > .slider {
+				align-self: center;
 				height: 30em;
 				max-height: none;
 			}
@@ -8554,6 +8562,7 @@
 				}*/
 
 			#banner > .slider {
+				align-self: center;
 				height: 20em;
 				max-height: 40vh;
 			}
