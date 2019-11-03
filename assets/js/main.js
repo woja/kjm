@@ -62,7 +62,7 @@ var settings = {
 
 		// Functions.
 			var preload = function (n) { 
-				if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
+				if(slides.length > n && slides[n].hasClass('lazy_slider')) {
 					var sliderImage = slides[n].find('img')[0];
 					console.log(sliderImage);
 					sliderImage.src = sliderImage.dataset.src;
