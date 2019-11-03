@@ -62,19 +62,19 @@ var settings = {
 				i = 0;
 
 		// Functions.
-			var preload = function (n) { 
-				try {
-					if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
-						var sliderImage = slides[n].find('img')[0];
-						console.log(sliderImage);
-						// We just do not want it to break the spinner...
-						sliderImage.setAttribute('src', sliderImage.dataset.src);
-						slides[n].removeClass('lazy_slider');
-					}
-				} catch(ex) {
-					alert(ex);
-				}
-			};
+			// var preload = function (n) { 
+			// 	try {
+			// 		if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
+			// 			var sliderImage = slides[n].find('img')[0];
+			// 			console.log(sliderImage);
+			// 			// We just do not want it to break the spinner...
+			// 			sliderImage.setAttribute('src', sliderImage.dataset.src);
+			// 			slides[n].removeClass('lazy_slider');
+			// 		}
+			// 	} catch(ex) {
+			// 		alert(ex);
+			// 	}
+			// };
 
 			$this._switchTo = function(x, stop) {
 
@@ -99,7 +99,7 @@ var settings = {
 					slides[pos].addClass('visible').addClass('top');
 
 				// Pre-load the next slide
-					preload(pos+1);
+					// preload(pos+1);
 
 				// Finish hiding last slide after a short delay.
 					window.setTimeout(function() {
@@ -139,7 +139,7 @@ var settings = {
 				}
 
 		// Pre-load the initial slide
-			preload(pos);
+			// preload(pos);
 
 		// Initial slide.
 			slides[pos]
@@ -151,7 +151,7 @@ var settings = {
 				return;
 				
 		// If we will continue, pre-load the next slide!
-			preload(pos+1);
+			// preload(pos+1);
 
 		// Main loop.
 			intervalId = window.setInterval(function() {
