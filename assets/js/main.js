@@ -35,7 +35,6 @@ var settings = {
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._slider = function(options) {
-		alert('running slider');
 
 		var	$window = $(window),
 			$this = $(this);
@@ -170,6 +169,7 @@ var settings = {
 	};
 	
 	$(function() {
+		alert('running jscript');
 
 		var	$window = $(window),
 			$body = $('body'),
