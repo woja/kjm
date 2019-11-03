@@ -28,7 +28,7 @@
 		         id="banner">
 			<div class="content">
 				<img src="assets/images/KJM.png" style="margin: 8px;">
-				<h1>Kirsten Mortimer</h1>
+				<h1 id="name_test">Kirsten Mortimer</h1>
 				<p class="major">Artist working in print and mixed-media</br>Living and working in West Berkshire</p>
 				<!--<ul class="actions horizontal">-->
 					<!-- NO THANKS!! Landing_Actions -->
@@ -653,8 +653,8 @@
 			// ... more custom settings?	
 		};
 	  </script>
-	  <script>	
-      alert('well?');
+    <script>	
+      document.getElementById("name_test").innerText = "Now?";
 	  </script>
 	  <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
 	  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.3.0/dist/lazyload.min.js"></script>
