@@ -130,17 +130,13 @@ var settings = {
 
 				});
 
-
-				// Just testing...
-				alert(Math.floor(Math.random() * i));
-
 		// Shuffle the slides so every visit is different!
-			// for(let i = slides.length - 1; i > 0; i--) {
-			// 		const j = Math.floor(Math.random() * i)
-			// 		const temp = slides[i]
-			// 		slides[i] = slides[j]
-			// 		slides[j] = temp
-			// 	}
+			for(let i = slides.length - 1; i > 0; i--) {
+					const j = Math.floor(Math.random() * i)
+					const temp = slides[i]
+					slides[i] = slides[j]
+					slides[j] = temp
+				}
 
 		// Pre-load the initial slide
 			preload(pos);
