@@ -35,6 +35,7 @@ var settings = {
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._slider = function(options) {
+		alert('running slider');
 
 		var	$window = $(window),
 			$this = $(this);
@@ -63,7 +64,6 @@ var settings = {
 		// Functions.
 			var preload = function (n) { 
 				try {
-					alert('load '+ n);
 					if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
 						var sliderImage = slides[n].find('img')[0];
 						console.log(sliderImage);
