@@ -61,6 +61,15 @@ var settings = {
 				i = 0;
 
 		// Functions.
+			var preload = function (n) { 
+				if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
+					var sliderImage = slides[n].find('img')[0];
+					console.log(sliderImage);
+					sliderImage.src = sliderImage.dataset.src;
+					slides[n].removeClass('lazy_slider');
+				}
+			};
+
 			$this._switchTo = function(x, stop) {
 
 				// Handle lock.
@@ -82,6 +91,9 @@ var settings = {
 
 				// Show new slide.
 					slides[pos].addClass('visible').addClass('top');
+
+				// Pre-load the next slide
+					preload(pos+1);
 
 				// Finish hiding last slide after a short delay.
 					window.setTimeout(function() {
@@ -112,6 +124,17 @@ var settings = {
 
 				});
 
+		// Shuffle the slides so every visit is different!
+			for(let i = slides.length - 1; i > 0; i--) {
+					const j = Math.floor(Math.random() * i)
+					const temp = slides[i]
+					slides[i] = slides[j]
+					slides[j] = temp
+				}
+
+		// Pre-load the initial slide
+			preload(pos);
+
 		// Initial slide.
 			slides[pos]
 				.addClass('visible')
@@ -120,6 +143,9 @@ var settings = {
 		// Bail if we only have a single slide.
 			if (slides.length == 1)
 				return;
+				
+		// If we will continue, pre-load the next slide!
+			preload(pos+1);
 
 		// Main loop.
 			intervalId = window.setInterval(function() {
@@ -136,7 +162,7 @@ var settings = {
 			}, options.delay);
 
 	};
-
+	
 	$(function() {
 
 		var	$window = $(window),
