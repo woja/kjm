@@ -4,8 +4,6 @@
 	License: pixelarity.com/license
 */
 
-alert('running main.js');
-
 var settings = {
 
 	slider: {
@@ -171,7 +169,6 @@ var settings = {
 	};
 	
 	$(function() {
-		alert('running jscript');
 
 		var	$window = $(window),
 			$body = $('body'),
