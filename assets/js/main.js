@@ -62,16 +62,17 @@ var settings = {
 
 		// Functions.
 			var preload = function (n) { 
-				if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
-					var sliderImage = slides[n].find('img')[0];
-					console.log(sliderImage);
-					try {
+				try {
+					alert('load '+ n);
+					if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
+						var sliderImage = slides[n].find('img')[0];
+						console.log(sliderImage);
 						// We just do not want it to break the spinner...
 						sliderImage.setAttribute('src', sliderImage.dataset.src);
-					} catch(ex) {
-						alert(ex);
+						slides[n].removeClass('lazy_slider');
 					}
-					slides[n].removeClass('lazy_slider');
+				} catch(ex) {
+					alert(ex);
 				}
 			};
 
