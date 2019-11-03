@@ -4,6 +4,8 @@
 	License: pixelarity.com/license
 */
 
+document.getElementById("name_test").innerText = "And then...";
+
 var settings = {
 
 	slider: {
