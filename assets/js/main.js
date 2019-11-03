@@ -130,6 +130,10 @@ var settings = {
 
 				});
 
+
+				// Just testing...
+				alert(Math.floor(Math.random() * i));
+
 		// Shuffle the slides so every visit is different!
 			// for(let i = slides.length - 1; i > 0; i--) {
 			// 		const j = Math.floor(Math.random() * i)
