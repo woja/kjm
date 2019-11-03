@@ -4,6 +4,8 @@
 	License: pixelarity.com/license
 */
 
+alert('running main.js');
+
 var settings = {
 
 	slider: {
