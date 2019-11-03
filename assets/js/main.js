@@ -4,7 +4,6 @@
 	License: pixelarity.com/license
 */
 
-
 var settings = {
 
 	slider: {
@@ -63,16 +62,11 @@ var settings = {
 
 		// Functions.
 			var preload = function (n) { 
-				try {
-					if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
-						var sliderImage = slides[n].find('img')[0];
-						console.log(sliderImage);
-						// We just do not want it to break the spinner...
-						sliderImage.setAttribute('src', sliderImage.dataset.src);
-						slides[n].removeClass('lazy_slider');
-					}
-				} catch(ex) {
-					// alert(ex);
+				if(slides.length >= n && slides[n].hasClass('lazy_slider')) {
+					var sliderImage = slides[n].find('img')[0];
+					console.log(sliderImage);
+					sliderImage.src = sliderImage.dataset.src;
+					slides[n].removeClass('lazy_slider');
 				}
 			};
 
@@ -119,7 +113,6 @@ var settings = {
 
 		// Slides.
 			$slides
-				.sort(function(a, b){return 0.5 - Math.random()}) // Not the best random - but the for below doesn't work...
 				.each(function() {
 
 					var $slide = $(this);
@@ -132,13 +125,12 @@ var settings = {
 				});
 
 		// Shuffle the slides so every visit is different!
-			// var temp_slides = [];
-			// for(let i = slides.length - 1; i > 0; i--) {
-			// 		const j = Math.floor(Math.random() * i)
-			// 		const temp = slides[i]
-			// 		slides[i] = slides[j]
-			// 		slides[j] = temp
-			// 	}
+			for(let i = slides.length - 1; i > 0; i--) {
+					const j = Math.floor(Math.random() * i)
+					const temp = slides[i]
+					slides[i] = slides[j]
+					slides[j] = temp
+				}
 
 		// Pre-load the initial slide
 			preload(pos);
