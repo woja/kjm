@@ -7086,7 +7086,9 @@
 
 	.wrapper.style2 {
 		padding: 7rem;
-		background-color: #eeeeee;
+		background-image: url("../images/about_background.png");
+		background-size: cover;
+		background-color: #ffffff;
 	}
 
 		.wrapper.style2 > .inner {
@@ -8044,14 +8046,6 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
-		.index > * > header {
-			width: 10rem;
-		}
-
-	}
-
-	@media screen and (max-width: 480px) {
 
 		.index > * {
 			-moz-flex-direction: column;
