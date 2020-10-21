@@ -8417,7 +8417,10 @@
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
-
+	
+		#banner > .content > img {
+			align-self: center;
+		}
 
 		#banner > .slider {
 			-moz-flex-grow: 0;
@@ -8481,6 +8484,31 @@
 
 		body.is-loading #banner > .slider {
 			opacity: 0;
+		}
+
+		@media screen and (orientation: portrait) {
+
+			#banner {
+				-moz-flex-direction: column-reverse;
+				-webkit-flex-direction: column-reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+			}
+
+/*				#banner > .items {
+					-moz-flex-direction: row;
+					-webkit-flex-direction: row;
+					-ms-flex-direction: row;
+					flex-direction: row;
+					width: 100%;
+				}
+*/
+				#banner > .slider {
+					height: 40em;
+					max-height: 55vh;
+					width: 100%;
+				}
+
 		}
 
 /*		@media screen and (max-width: 1680px) {
