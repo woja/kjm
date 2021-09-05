@@ -6461,34 +6461,10 @@
 				padding: 1rem;
 			}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 780px) {
 
 			.gallery.style1.small article {
-				width: 25%;
-			}
-
-				.gallery.style1.small article .caption {
-					padding: 1rem;
-				}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.gallery.style1.small article {
-				width: 33.33333%;
-			}
-
-				.gallery.style1.small article .caption {
-					padding: 1rem;
-				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.gallery.style1.small article {
-				width: 50%;
+				width: 100%;
 			}
 
 				.gallery.style1.small article .caption {
